@@ -3,12 +3,14 @@ import urllib.request
 import json
 def apipara(a):
     req = PreparedRequest()
-    url = "http://integra-net4/BMJ_ICE_Test/assignjob"
+    url = "any url"
     params = {'ID':a}
     req.prepare_url(url, params)
     content = urllib.request.urlopen(req.url).read()
     data = json.loads(content)
-    return data['success'],data['msg']
+    print(data['success'])#I Extract json content
+    print(data['msg'])#I Extract json content
+apipara(1)
    
 
 
